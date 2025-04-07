@@ -35,12 +35,12 @@ const usingThen = (cb) => {
  *   - ne pas utiliser .then
  */
 
-const usingAwait = async () => {
+const usingAwait = async (cb) => {
   const { sleep } = require("./10_promise");
   console.log("start");
   await sleep(2000);
   console.log("end");
-
+  cb();
 }
 
 //usingAwait();
