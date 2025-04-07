@@ -12,7 +12,17 @@
  * 
  */
 const usingThen = (cb) => {
+  const { sleep } = require("./10_promise");
+  console.log(1);
+  sleep(2000).then(synchFonction());
+  console.log(2)
+  function synchFonction() {
+    console.log(3)
+    return cb;
+  }
 }
+
+//usingThen(2000);
 
 /**
  * Créez une fonction asynchrone qui attend 2 seconde puis execute le callback passé en paramètre
@@ -25,9 +35,15 @@ const usingThen = (cb) => {
  *   - ne pas utiliser .then
  */
 
-const usingAwait = (cb) => {
+const usingAwait = async () => {
+  const { sleep } = require("./10_promise");
+  console.log("start");
+  await sleep(2000);
+  console.log("end");
 
 }
+
+usingAwait();
 
 /**
  * Créez une fonction asynchrone qui effectue un appel api vers l'url passé en paramètre
@@ -49,4 +65,4 @@ const apiResponse = async (url) => {
 }
 
 
-module.exports = {usingThen, usingAwait, apiResponse};
+module.exports = { usingThen, usingAwait, apiResponse };

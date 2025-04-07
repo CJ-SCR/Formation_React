@@ -5,8 +5,9 @@
  * utilisez new Promise
  */
 
-const sleep = () => {
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
-};
-
-module.exports = {sleep};
+console.log(1);
+sleep(2000);
+console.log(2);
+module.exports = { sleep };
