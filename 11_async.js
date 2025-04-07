@@ -43,7 +43,7 @@ const usingAwait = async () => {
 
 }
 
-usingAwait();
+//usingAwait();
 
 /**
  * Créez une fonction asynchrone qui effectue un appel api vers l'url passé en paramètre
@@ -58,11 +58,13 @@ usingAwait();
  */
 
 //décommentez la ligne suivante une fois le package installé
-//const axios = require("axios");
+const axios = require("axios");
 
 const apiResponse = async (url) => {
-
+  let res = axios.get(url);
+  return (await res.data);
 }
 
+apiResponse(https://jsonplaceholder.typicode.com/todos/1)
 
-module.exports = { usingThen, usingAwait, apiResponse };
+  module.exports = { usingThen, usingAwait, apiResponse };
