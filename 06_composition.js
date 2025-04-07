@@ -8,7 +8,7 @@
  *  - for, foreach, while, do while sont interdits
  */
 
-const concat = (arr1, arr2) => ([...arr1, ...arr2])
+const concat = (arr1, arr2) => [...arr1, ...arr2]
 console.log(concat([1, 2], [3, 4]));
 
 /**

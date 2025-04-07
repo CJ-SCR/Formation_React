@@ -24,7 +24,7 @@ console.log(extractFirstTwo([1, 2, 3]))
  * exemple: [1, 2, 3] => [2, 3]
  */
 
-const extractRest = () => { }
+const extractRest = ([_, ...rest]) => rest // le _ pour dire que c'est une variable inutilisée
 
 /**
  * utilisez la décomposition pour extraire le champ "name" de l'objet passé en paramètre
@@ -38,7 +38,7 @@ const extractRest = () => { }
  * - interdiction d'utiliser l'opérateur "." pour accéder au champ "name"
  */
 
-const extractName = () => { }
+const extractName = ({ name }) => name
 
 /**
  * utilisez la décomposition pour retourner l'objet utilisateur sans le champ "password"
@@ -51,6 +51,6 @@ const extractName = () => { }
  * 
  */
 
-const removePassword = () => { };
+const removePassword = ({ password, ...rest }) => rest;
 
 module.exports = { extractFirstTwo, extractRest, extractName, removePassword }
