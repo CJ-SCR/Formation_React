@@ -65,6 +65,6 @@ const apiResponse = async (url) => {
   return (await res.data);
 }
 
-apiResponse(https://jsonplaceholder.typicode.com/todos/1)
+apiResponse("https://jsonplaceholder.typicode.com/todos/1");
 
-  module.exports = { usingThen, usingAwait, apiResponse };
+module.exports = { usingThen, usingAwait, apiResponse };
